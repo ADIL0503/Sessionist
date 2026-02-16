@@ -1,0 +1,222 @@
+/* ---------------- GLOBAL ---------------- */
+body{
+    background:#0F172A;
+    color:#F9FAFB;
+}
+
+/* ---------------- HOME ---------------- */
+#mainDivhome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border:1px solid #374151;
+    border-radius: 20px;
+    background:#111827;
+}
+
+#containerbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #374151;
+    height: 50vh;
+    width: 80vw;
+    border-radius: 20px;
+    gap: 20px;
+    background:#111827;
+}
+
+#greet{
+    transform: translateY(-110px);
+}
+
+#stdiv,#viewdiv{
+    font-size: 2rem;
+    border:1px solid #374151;
+    border-radius: 12px;
+    padding: 15px 25px;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background:#1F2937;
+    color:#F9FAFB;
+    transition:0.15s;
+}
+
+#stdiv:hover,#viewdiv:hover{
+    background:#374151;
+    transform:scale(1.05);
+}
+
+/* ---------------- ANALYSIS ---------------- */
+#main_div_analysis{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border:1px solid #374151;
+    border-radius: 12px;
+    height: 100vh;
+    gap: 20px;
+    background:#111827;
+}
+
+#brief_analysis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border:1px solid #374151;
+    border-radius: 12px;
+    height: 50vh;
+    width: 80vw;
+    gap: 20px;
+    background:#111827;
+}
+
+.brief{
+    border:1px solid #374151;
+    border-radius: 12px;
+    padding: 10px; 
+    width: 150px;
+    background:#1F2937;
+    color:#9CA3AF;
+}
+
+#analysis_to_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #374151;
+    border-radius: 12px;
+    padding: 10px;
+    width: 70px;
+    cursor: pointer;
+    background:#1F2937;
+    color:#F9FAFB;
+    transition:0.15s;
+}
+
+#analysis_to_home:hover{
+    background:#374151;
+    transform:scale(1.05);
+}
+
+/* ---------------- SESSION ---------------- */
+#session_container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border:1px solid #374151;
+    border-radius: 12px;
+    height: 100vh;
+    background:#111827;
+}
+
+#end_session{
+    border:none;
+    border-radius: 12px;
+    display: flex;
+    align-self: flex-end;
+    padding: 5px;
+    position: absolute;
+    top: 50px;
+    margin-right: 30px;
+    cursor: pointer;
+    background:#EF4444;
+    color:white;
+    transition:0.15s;
+}
+
+#end_session:hover{
+    background:#DC2626;
+    transform:scale(1.05);
+}
+
+#session_label{
+    border:1px solid #374151;
+    border-radius: 12px;   
+    display: flex;
+    align-self: flex-start;
+    padding: 5px;
+    position: absolute;
+    top: 50px;
+    margin-left: 30px; 
+    cursor: pointer;
+    background:#1F2937;
+    color:#F9FAFB;
+    transition:0.15s;
+}
+
+#session_label:hover{
+    background:#374151;
+}
+
+#btn_container{
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    width: 90vw;
+    margin-bottom: 30px;   
+}
+
+#start,#stop,#reset{
+    border-radius: 12px;  
+    padding: 5px;
+    width: 60px;
+    height: 20px;
+    cursor: pointer;
+    transition:0.15s;
+    color:white;
+}
+
+/* start = green */
+#start{
+    border:none;
+    background:#22C55E;
+}
+
+#start:hover{
+    background:#16A34A;
+    transform:scale(1.05);
+}
+
+/* stop = blue */
+#stop{
+    border:none;
+    background:#3B82F6;
+}
+
+#stop:hover{
+    background:#2563EB;
+    transform:scale(1.05);
+}
+
+/* reset = gray */
+#reset{
+    border:none;
+    background:#374151;
+}
+
+#reset:hover{
+    background:#4B5563;
+}
+
+#stopwatch{
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #374151;
+    border-radius: 50%;
+    width: clamp(180px,40vw,420px);
+    aspect-ratio: 1/1;
+    background:#1F2937;
+    color:#F9FAFB;
+}
