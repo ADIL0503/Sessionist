@@ -227,6 +227,7 @@ body{
     aspect-ratio: 1/1;
     background:#1F2937;
     color:#F9FAFB;
+    font-size:xx-large;
 }
 body{
     overflow:hidden;
@@ -236,6 +237,7 @@ body{
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
 
 
 
