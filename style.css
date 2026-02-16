@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100dvh;
     border:1px solid #374151;
     border-radius: 20px;
     background:#111827;
@@ -60,7 +60,7 @@ body{
     align-items: center;
     border:1px solid #374151;
     border-radius: 12px;
-    height: 100vh;
+    min-height: 100dvh;
     gap: 20px;
     background:#111827;
 }
@@ -115,7 +115,7 @@ body{
     align-items: center;
     border:1px solid #374151;
     border-radius: 12px;
-    height: 100vh;
+    min-height: 100dvh;
     background:#111827;
 }
 
@@ -160,7 +160,7 @@ body{
 
 #btn_container{
     display: flex;
-    margin-top: auto;
+    margin-top: 40px;
     justify-content: space-between;
     width: 90vw;
     margin-bottom: 30px;   
@@ -225,6 +225,11 @@ body{
 }
 body{
     overflow:hidden;
+}
+@supports (padding: max(0px)) {
+  body{
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 
 
