@@ -223,4 +223,8 @@ body{
     background:#1F2937;
     color:#F9FAFB;
 }
+body{
+    overflow:hidden;
+}
+
 
