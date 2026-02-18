@@ -126,7 +126,7 @@ body{
     border-radius: 12px;
     display: flex;
     align-self: flex-end;
-    font-size: 20px;
+    font-size: 12px;
     padding: 15px;
     position: absolute;
     top: 50px;
@@ -147,7 +147,7 @@ body{
     border-radius: 12px;   
     display: flex;
     align-self: flex-start;
-    font-size: 20px;
+    font-size: 12px;
     padding: 15px;
     position: absolute;
     top: 50px;
@@ -242,6 +242,7 @@ body{
     padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
 
 
 
