@@ -190,7 +190,7 @@ body{
     padding: 15px;
 }
 
-/* start = green */
+
 #start{
     border:none;
     background:#22C55E;
@@ -201,7 +201,7 @@ body{
     transform:scale(1.05);
 }
 
-/* stop = blue */
+
 #stop{
     border:none;
     background:#3B82F6;
@@ -212,7 +212,7 @@ body{
     transform:scale(1.05);
 }
 
-/* reset = gray */
+
 #reset{
     border:none;
     background:#374151;
@@ -234,8 +234,41 @@ body{
     color:#F9FAFB;
     font-size:xx-large;
 }
-body{
-    overflow:hidden;
+/*--------------------------------------stats-----------------------------------------*/
+
+#canvas_container{
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #374151;
+}
+#canvas{
+    max-width: 600px;
+    width: 90vw;
+    height: 100vh;
+}
+#heading_stats{
+    color: #F9FAFB;
+    display: flex;
+    justify-self: center;
+}
+#stats_2_home{
+    display: flex;
+    justify-self: center;
+    margin-top: 10px;
+    border:1px solid #374151;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    background:#1F2937;
+    color:#F9FAFB;
+    transition:0.15s;
+}
+#stats_2_home:hover{
+    background:#374151;
+    transform:scale(1.05);
 }
 @supports (padding: max(0px)) {
   body{
