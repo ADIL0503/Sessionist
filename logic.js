@@ -80,11 +80,71 @@ if(analysis2home){
         window.location.href="home.html"
     })}
 let analysis_session_type=document.querySelector("#session_display")
+if (analysis_session_type){
 analysis_session_type.textContent="session type :"+localStorage.getItem("sessionType")
 localStorage.removeItem("sessionType")
+}
 const live_date= new Date()
 const formatted_live_date=live_date.toDateString()
+if(document.querySelector("#current_date")){
 document.querySelector("#current_date").textContent="Date :"+formatted_live_date
+}
+if(document.querySelector("#time_display")){
 document.querySelector("#time_display").textContent="Duration :"+localStorage.getItem("displaytime")
-localStorage.removeItem("displaytime")
+}
+/*graph is the dict that stores date and duration */
+let graph = JSON.parse(localStorage.getItem("graph")) || {};
+
+let graph_time = localStorage.getItem("displaytime");
+
+if (graph_time !== null) {
+
+    graph_time =
+        parseInt(graph_time.slice(0,2)) * 60 +
+        parseInt(graph_time.slice(3,5)) +
+        parseInt(graph_time.slice(6,8)) / 60;
+
+    let today = new Date().toLocaleDateString("en-GB");
+
+    graph[today] = (graph[today] ?? 0) + graph_time;
+
+    localStorage.setItem("graph", JSON.stringify(graph));
+    localStorage.removeItem("displaytime");
+}
 /*--------------------------------------------------------------analysis------------------------------------------------------------*/
+console.log(graph)
+let labels = Object.keys(graph);
+let values = Object.values(graph);
+
+const canvas =document.querySelector("#myChart")
+if(canvas){
+const ctx = document.querySelector("#myChart").getContext("2d");
+
+let myChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+        labels: labels,
+        datasets: [{
+            label: "Duration (minutes)",
+            data: values,
+            borderWidth: 2,
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});}
+if(document.querySelector("#stats_2_home")){
+    document.querySelector("#stats_2_home").addEventListener("click",()=>{
+        window.location.href="home.html"
+    })
+}
+/*-----------------------------------------------------------------stats-------------------------------------------------------------------*/
+
+
